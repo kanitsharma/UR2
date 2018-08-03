@@ -1,0 +1,27 @@
+{
+  "name": "ur2",
+  "version": "0.0.17",
+  "description": "",
+  "main": "dist/main.js",
+  "scripts": {
+    "test": "../../node_modules/.bin/ava test.js test.js",
+    "build": "node build.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kanitsharma/ur2"
+  },
+  "homepage": "https://github.com/kanitsharma/ur2",
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "kanitsharma",
+  "license": "MIT",
+  "dependencies": {
+  }
+}
