@@ -1,21 +1,19 @@
-import { PUSH, REPLACE, GO, GO_BACK, GO_FORWARD } from './constants'
-
 // eslint-disable-next-line consistent-return
 export const routerMiddleware = history => () => next => action => {
   switch (action.type) {
-    case PUSH:
+    case 'ROUTER/PUSH':
       history.push(action.payload)
       break
-    case REPLACE:
+    case 'ROUTER/REPLACE':
       history.replace(action.payload)
       break
-    case GO:
+    case 'ROUTER/GO':
       history.go(action.payload)
       break
-    case GO_BACK:
+    case 'ROUTER/GO_BACK':
       history.goBack()
       break
-    case GO_FORWARD:
+    case 'ROUTER/GO_FORWARD':
       history.goForward()
       break
     default:

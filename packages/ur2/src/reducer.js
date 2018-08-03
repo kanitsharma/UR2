@@ -1,5 +1,3 @@
-import { LOCATION_CHANGE } from './constants'
-
 const getInitialState = {
   pathname: '/',
   search: '',
@@ -9,7 +7,7 @@ const getInitialState = {
 
 export const routerReducer = (state = getInitialState, action) => {
   switch (action.type) {
-    case LOCATION_CHANGE:
+    case 'ROUTER/LOCATION_CHANGE':
       return {
         ...state,
         ...action.payload
