@@ -1,5 +1,13 @@
 # Universal Redux Router
 
+- Read location data from the store.
+- Update the location by dispatching navigation actions.
+- Let middleware handle the side-effect of history navigation.
+
+![Redux-first routing](https://camo.githubusercontent.com/b08b1b78a08e0444ab451f692618d59da977e6a1/687474703a2f2f692e696d6775722e636f6d2f734169566c6b4d2e6a7067)
+
+## Usage
+
 ```js
 import { combineReducers, applyMiddleware, createStore } from 'redux'
 import {
@@ -31,19 +39,6 @@ startListener(history, store)
 
 // Now you can read the location from the store!
 let currentLocation = store.getState().router.pathname
-
-// You can also subscribe to changes in the location!
-let unsubscribe = store.subscribe(() => {
-  let previousLocation = currentLocation
-  currentLocation = store.getState().router.pathname
-
-  if (previousLocation !== currentLocation) {
-    console.log(
-      `Location changed from ${previousLocation} to ${currentLocation}`
-    )
-    // Render your application reactively here (optionally using a compatible router)
-  }
-})
 
 // And you can dispatch navigation actions from anywhere!
 store.dispatch(push('/about'))
