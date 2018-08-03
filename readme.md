@@ -43,3 +43,12 @@ let currentLocation = store.getState().router.pathname
 // And you can dispatch navigation actions from anywhere!
 store.dispatch(push('/about'))
 ```
+
+### Action Creators
+
+- push
+- replace
+- go
+- goBack
+- goForward
+- locationChange
